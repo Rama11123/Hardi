@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: black;
   }
   
   .navbar {
@@ -107,7 +108,7 @@ body, html {
   }
   
   .product {
-    width: 300px;
+    width: 250px;
     margin: 20px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -119,7 +120,7 @@ body, html {
   }
 
   .product-image1 {
-    width: 250px;
+    width: 100px;
     height: 300px;
   }
   
@@ -153,6 +154,53 @@ body, html {
     background-color: #149e81;
   }
 
+  .Banner {
+    background-image: linear-gradient(rgb(225, 243, 243),white, gray);
+    margin: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 10px;
+  }
+
+  .left{
+    color: black;
+    
+  }
+
+  .l-h3{
+   position: relative;
+   font-size: 20px;
+   top: 65px;
+   margin-left: 30px;
+  }
+
+  .right {
+    padding: 0;
+  }
+
+  .right, .img-left{
+    position: relative;
+    width: 150px;
+    margin: -10px 0 0 auto;  
+  }
+
+  .buy{
+    position: relative;
+    padding: 10px;
+    background-color: #333;
+    margin-left: 20px;
+    margin-right: 70%;
+    bottom: 50px;
+    left: 30px;
+    border-radius: 18px;
+    cursor: pointer;
+  }
+
+  .buy-a {
+    color: azure;
+    text-decoration: none;
+    margin-left: 35%;
+  }
   /*footer*/
   .footer {
     background-color: #333;
