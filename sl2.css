@@ -1,0 +1,149 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+  }
+
+.navbar {
+    background-color: azure;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    width: 500px;
+    height: 50px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links li a:hover {
+    color: #1abc9c;
+  }
+  .cart {
+    width: 30px;
+    height: 30px;
+  }
+    /*content*/
+    .merch{
+        background-color: #fff;
+    }
+    /*product*/
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .product {
+      width: 250px;
+      margin: 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-image {
+      width: 100%;
+      height: auto;
+    }
+      
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .product-price {
+      font-size: 16px;
+      color: #1abc9c;
+      margin-bottom: 10px;
+    }
+    
+    .btn-buy {
+      padding: 10px 20px;
+      background-color: #1abc9c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .btn-buy:hover {
+      background-color: #149e81;
+    }
+    /*footer*/
+  .footer {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left {
+    flex-grow: 1;
+  }
+  
+  .footer-right {
+    flex-grow: 1;
+    text-align: right;
+  }
+  
+  .footer-left h3, .footer-right h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer-links li a:hover {
+    color: #1abc9c;
+  }
+  
+  .footer-bottom {
+    background-color: #1abc9c;
+    padding: 10px 20px;
+    text-align: center;
+  }
