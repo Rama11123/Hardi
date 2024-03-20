@@ -25,3 +25,15 @@ function showSlide(n) {
   
   slides[slideIndex].style.display = "block";  
 }
+//memuat data ke cart-script//
+function addToCart(name, price) {
+  // Mendapatkan data keranjang belanja dari local storage atau membuat array baru jika belum ada
+  let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Menambahkan barang ke dalam keranjang belanja
+  cartItems.push({ name, price });
+
+  // Menyimpan kembali data keranjang belanja ke local storage
+  localStorage.setItem('cart', JSON.stringify(cartItems));
+}
+
