@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mi</title>
   <link rel="shortcut icon" href="gambar/mi logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,6 +35,25 @@
   </div>
 </div>
   <!--content-->
+  <div class="content">
+        <?php
+          include "db.php";
+          $query = "SELECT * FROM product ORDER BY id_product ASC"; 
+          $result = mysqli_query($conn, $query);
+          while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+        <div class="card" style="width: 18rem;">
+  <img src="assets/<?php echo $row['foto_product']; ?>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $row['nama_product']; ?></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary"><?php echo $row['price']; ?></a>
+  </div>
+</div>
+      <?php 
+        }
+       ?>
+  </div>
   <!--content clear-->
   <!--footer-->
   <footer class="footer">
@@ -57,6 +77,5 @@
   </footer>
   <!--footer clear-->
   <script src="script.js"></script>
-  <?php include "db.php"; ?>
 </body>
 </html>

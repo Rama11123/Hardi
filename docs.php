@@ -4,11 +4,11 @@
     <title>Upload Produk</title>
 </head>
 <body>
-    <form action="docs.php" class="formproduk" method="POST">
+    <form action="docs.php" class="formproduk" method="POST" enctype="multipart/form-data">
         Id Produk <br>
         <input type="text" name="id_product" id="id_product" class="id_produk"><br>
         Foto Produk <br>
-        <input type="file" name="foto_product" id="foto_product" class="foto_produk"><br>
+        <input type="file" name="image" id="image" class="foto_produk"><br>
         Nama Produk <br>
         <input type="text" name="nama_product" id="nama_product" class="nama_produk"><br>
         Brand <br>
@@ -27,8 +27,8 @@
         include "db.php";
         if(isset($_POST['submit'])){
             $id_product = $_POST['id_product'];
-            $foto_product = $_FILES['foto_product']['name'];
-            $tmp = $_FILES['foto_product']['tmp_name'];
+            $image = $_FILES['image']['name'];
+            $tmp = $_FILES['image']['tmp_name'];
             $nama_product = $_POST['nama_product'];
             $brand = $_POST['brand'];
             $model = $_POST['model'];
@@ -37,7 +37,7 @@
             $price = $_POST['price'];
 
             $timestamp = time();
-            $newname = $timestamp.$foto_product;
+            $newname = $timestamp.$image;
 
             $sql = "INSERT INTO product VALUES ('$id_product','$newname','$nama_product','$brand','$model','$release_year','$os','$price')";
             mysqli_query($conn, $sql);
